@@ -1,0 +1,61 @@
+.card_activeusers{
+
+    background-color: #34a9b6;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+}
+
+.card_activelearners{
+
+    background-color: #f0685e;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+}
+
+.card_nologincourses{
+
+    background-color: 
+    #41697e;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+}
+
+.card_courseparticipation{
+
+    background-color: 
+    #41697e;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+}
+
+.image_script{
+    margin-top: 20px;
+}
+
+.card_coursecompletions{
+
+    background-color: grey;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+}
+.card_enrolledusers{
+
+    background-color: grey;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+}
+.card_categoriesreport{
+
+    background-color: grey;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+}
