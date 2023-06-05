@@ -95,7 +95,59 @@ echo "There are $countenrolls users in course 3";
 
 echo $OUTPUT->box_end();
 
-   
+echo '<br/>';
+
+echo $OUTPUT->heading("total users", 4);
+echo $OUTPUT->box_start();
+echo '<br/>';
+
+echo"This report counts total users;";
+
+  $enrolls = $DB->get_records_sql("
+
+SELECT ra.userid
+
+FROM {role_assignments} ra
+
+JOIN {context} ctx ON ra.contextid=ctx.id
+
+where ra.roleid = 5");
+
+$countusers = count($enrolls);
+
+echo "$countusers";
+
+echo $OUTPUT->box_end();
+
+      
+
+
+echo '<br/>';
+
+echo '<br/>';
+
+echo $OUTPUT->heading("total instructors", 4);
+echo $OUTPUT->box_start();
+echo '<br/>';
+
+echo"This report counts total instructors;";
+
+  $enrollteachers = $DB->get_records_sql("
+
+SELECT ra.userid
+
+FROM {role_assignments} ra
+
+JOIN {context} ctx ON ra.contextid=ctx.id
+
+where ra.roleid = 3 ");
+
+$countteachers = count($enrollteachers);
+
+echo "$countteachers";
+
+echo $OUTPUT->box_end();
+
       
 
 
