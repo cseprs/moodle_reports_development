@@ -27,9 +27,9 @@ echo $OUTPUT->header();
 
 
 
-/*echo $OUTPUT->heading("Active logins", 4);
+//echo $OUTPUT->heading("ED Reporting Dashboard", 4);
 
-echo $OUTPUT->box_start();
+/*echo $OUTPUT->box_start();
 echo" count of users (including teachers, and students) active in the LMS for the last 120 days 
 ;";
 echo '<br/>'; */
@@ -246,11 +246,19 @@ $courses = $DB-> get_records('course_categories');
     <link rel="stylesheet" type="text/css" href="main.css">
    </head>
 <body>
+<div class="report-header row m-0">
+    <div class="page-title col-9 pl-0 text-center">
+        <h2 class="theme-1-color">Reporting Dashboard</h2>
+    </div>
+    <div class="back-url col-3 pr-0 text-right">
+        <a href="#" class="btn bg-primary text-white">Link to website</a>
+    </div>
+</div>
 <div class="container">
 <div class ="row">
   
 <div class = "col-lg-4 col-md-3" >
-   <div class="card_activeusers" style="width: 16rem; height:20vh;">
+   <div class="card_activeusers" style="width: 20rem; height:14vh;">
    <div class="row m-0">
    <div class="col-lg-8 col-md-4 p-0">
       <div class="content">
@@ -262,7 +270,7 @@ $courses = $DB-> get_records('course_categories');
   <div class="col-lg-4 col-md-8 p-0">
       <div class="image_script">
       
-         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="80px">
+         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="50px">
 
       </div>
   </div>
@@ -270,7 +278,7 @@ $courses = $DB-> get_records('course_categories');
 </div>
 </div>
 <div class = "col-lg-4 col-md-3" >
-   <div class="card_activeusers" style="width: 16rem; height:20vh;">
+   <div class="card_activeusers" style="width: 20rem; height:14vh;">
    <div class="row m-0">
    <div class="col-lg-8 col-md-4 p-0">
       <div class="content">
@@ -282,7 +290,7 @@ $courses = $DB-> get_records('course_categories');
   <div class="col-lg-4 col-md-8 p-0">
       <div class="image_script">
       
-         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="80px">
+         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="50px">
 
       </div>
   </div>
@@ -291,7 +299,7 @@ $courses = $DB-> get_records('course_categories');
 </div>
 
 <div class = "col-lg-4 col-md-3" >
-   <div class="card_activelearners" style="width: 16rem; height:20vh;">
+   <div class="card_activelearners" style="width: 20rem; height:14vh;">
    <div class="row m-0">
    <div class="col-lg-8 col-md-4 p-0">
       <div class="content">
@@ -302,7 +310,7 @@ $courses = $DB-> get_records('course_categories');
   </div>
   <div class="col-lg-4 col-md-8 p-0">
       <div class="image_script">
-         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="80px">
+         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="50px">
 
       </div>
   </div>
@@ -317,7 +325,7 @@ $courses = $DB-> get_records('course_categories');
 <div class ="row">
   
 <div class = "col-lg-4 col-md-3" >
-   <div class="card_activeusers" style="width: 16rem; height:20vh;">
+   <div class="card_activeusers" style="width: 20rem; height:14vh;">
    <div class="row m-0">
    <div class="col-lg-8 col-md-4 p-0">
       <div class="content">
@@ -329,7 +337,7 @@ $courses = $DB-> get_records('course_categories');
   <div class="col-lg-4 col-md-8 p-0">
       <div class="image_script">
       
-         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="80px">
+         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="50px">
 
       </div>
   </div>
@@ -337,7 +345,7 @@ $courses = $DB-> get_records('course_categories');
 </div>
 </div>
 <div class = "col-lg-4 col-md-3" >
-   <div class="card_activeusers" style="width: 16rem; height:20vh;">
+   <div class="card_activeusers" style="width: 20rem; height:14vh;">
    <div class="row m-0">
    <div class="col-lg-8 col-md-4 p-0">
       <div class="content">
@@ -349,7 +357,7 @@ $courses = $DB-> get_records('course_categories');
   <div class="col-lg-4 col-md-8 p-0">
       <div class="image_script">
       
-         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="80px">
+         <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="50px">
 
       </div>
   </div>
@@ -368,7 +376,7 @@ $courses = $DB-> get_records('course_categories');
       <div class ="row">
         
       <div class = "col-lg-6 col-md-3" >
-         <div class="card_nologincourses" style="width: 24rem; height:22vh;">
+         <div class="card_nologincourses" style="width: 35rem; height:18vh;">
          <div class="row m-0">
          <div class="col-lg-8 col-md-4 p-0">
             <div class="content">
@@ -391,7 +399,7 @@ $courses = $DB-> get_records('course_categories');
                 </table>
             </div>
         </div>
-        <div class="col-lg-4 col-md-8 p-0">
+        <div class="col-lg-4 col-md-8 p-0 text-right">
             <div class="image_script">
                <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="80px">
       
@@ -402,7 +410,7 @@ $courses = $DB-> get_records('course_categories');
       </div>
       
       <div class = "col-lg-6 col-md-3" >
-         <div class="card_courseparticipation" style="width: 24rem; height:20vh;">
+         <div class="card_courseparticipation" style="width: 35rem; height:18vh;">
          <div class="row m-0">
          <div class="col-lg-8 col-md-4 p-0">
             <div class="content">
@@ -426,7 +434,7 @@ $courses = $DB-> get_records('course_categories');
                 </table>
             </div>
         </div>
-        <div class="col-lg-4 col-md-8 p-0">
+        <div class="col-lg-4 col-md-8 p-0 text-right" >
             <div class="image_script">
                <img src="learnscript/activelearners.jpg" alt="image" width="80px" height="80px">
       
@@ -440,6 +448,124 @@ $courses = $DB-> get_records('course_categories');
          </div> 
 
          <p></p>
+
+         <div class="card text-white bg-primary">
+    <div class="card-block">
+        <div class="row mx-0">
+            <div class="col-5">
+                <div class="bold mb-1">
+                    Todays Logins
+                </div>
+                <div class="mx-0 text-center text-green">
+                    <div class="d-flex w-100 todays-block theme-2-bg">
+                        <div class="m-auto">
+                            <div id="todays-onlinelearners" class=" font-size-30 font-weight-600 w-full">
+                                <div class="data">[php code to place]</div>
+                            </div>
+                            <label class="font-weight-400 font-3">
+                                Todays Online Learners
+                            </label>
+                        </div>
+                    </div>
+                    <div class="d-flex w-100 todays-block theme-2-bg">
+                        <div class="m-auto">
+                            <div id="todays-onlineteachers" class=" font-size-30 font-weight-600 w-full">
+                                <div class="data">[php code to place]</div>
+                            </div>
+                            <label class="font-weight-400 font-3">
+                                Todays Online Teachers
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <table class="summary ml-auto">
+                    <thead class="border-bottom">
+                        <tr>
+                            <th class="text-left">
+                                Events
+                            </th>
+                            <th class="text-center">
+                                Summary
+                            </th>
+                            <th class="text-right ">
+                                Count
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">
+                                Active users
+                            </td>
+                            <td class="text-center">
+                                Active in the LMS for last 120 days
+                            </td>
+                            <td class="text-right" id="activeusers">
+                                <span class="data"><?php echo $count ?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                Learners
+                            </td>
+                            <td class="text-center">
+                                Total count of learners in the LMS
+                            </td>
+                            <td class="text-right" id="learners">
+                                <span class="data"><?php echo $countusers ?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                Instructors
+                            </td>
+                            <td class="text-center">
+                               Total count of teachers in the LMS
+                            </td>
+                            <td class="text-right" id="teachers">
+                                <span class="data"><?php echo $countteachers ?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                Course Completions
+                            </td>
+                            <td class="text-center">
+                                Counts the number of learner completions from all available courses in the system
+                            </td>
+                            <td class="text-right" id="coursecompletions">
+                                <span class="data"><?php echo $content ?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                Enrollments
+                            </td>
+                            <td class="text-center">
+                                Counts the number of learners enrolled in the course 3
+                            </td>
+                            <td class="text-right" id="enrollments">
+                                <span class="data"><?php echo $countenrolls ?></span>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="visual col-12">
+            <p class="visual-head bold">
+               Site visits
+            </p>
+            <div id="sitevisits" class=" font-size-30 font-weight-600 w-full">
+                                <div class="data">[php code to place]</div>
+                            </div>
+        </div>
+    </div>
+</div>
+<p></p>     
 
          <div class="container">
             <div class ="row">
@@ -510,7 +636,13 @@ $courses = $DB-> get_records('course_categories');
                            </div> 
                            <p></p>
 
-<div class="container">
+
+
+                         
+
+
+
+ <div class="container">
 <div class ="row">
   
 
@@ -528,6 +660,4 @@ $courses = $DB-> get_records('course_categories');
 </div>
    </div> 
    <p></p>
-</body>
-</html>
-    
+  
