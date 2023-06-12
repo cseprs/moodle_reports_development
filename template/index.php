@@ -62,6 +62,20 @@ FROM {course_completions} p
 ");
 
 $content = count($timecompleted);
+
+
+$visitsssql = "SELECT DISTINCT userid
+FROM {logstore_standard_log}
+WHERE timecreated >= :starttime
+AND timecreated < :endtime
+AND userid < 1";
+$params = array(
+'starttime' => $starttime,
+'endtime' => $endtime
+);
+$visits = $DB->get_records_sql($visitsssql, $params);
+
+$sitevisits= count($visits);
 /*echo "$content";
 
 echo $OUTPUT->box_end();*/
@@ -559,13 +573,56 @@ $courses = $DB-> get_records('course_categories');
             <p class="visual-head bold">
                Site visits
             </p>
+            <p> Get todays site visit count</p>
             <div id="sitevisits" class=" font-size-30 font-weight-600 w-full">
-                                <div class="data">[php code to place]</div>
+                                <div class="data"><?php echo $sitevisits ?></div>
                             </div>
         </div>
     </div>
 </div>
 <p></p>     
+<div class="funfacts-area bg-primary text-white pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            
+            <h2>FUN FACTS</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-6">
+                <div class="single-funfacts-box bg-success text-white">
+                    <h3><span class="odometer" data-count="1926"></span>%</h3>
+                    <p>Get todays site visit count</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-3 col-md-3 col-6">
+                <div class="single-funfacts-box bg-success">
+                    <h3><span class="odometer" data-count="3279"></span>%</h3>
+                    <p>Get todays Enrolled Learners</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-3 col-md-3 col-6">
+                <div class="single-funfacts-box bg-success">
+                    <h3><span class="odometer" data-count="25"></span>%</h3>
+                    <p>Get todays registration count</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-3 col-md-3 col-6">
+                <div class="single-funfacts-box bg-success">
+                    <h3><span class="odometer" data-count="99"></span><span class="sign">%</span></h3>
+                    <p>Get todays module completion count</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</div>
+<p></p>
 
          <div class="container">
             <div class ="row">
@@ -642,22 +699,6 @@ $courses = $DB-> get_records('course_categories');
 
 
 
- <div class="container">
-<div class ="row">
-  
-
-<div class = "col-lg-12 col-md-12" >
-   <div class="card_categoriesreport" style="width: 24rem; height:35vh;">
-   <div class="row m-0">
-
-      <div class="content">
-         
-          <p>Categories Report</p>
-          <p><?php echo $contents ?>
-
-       
-  </div>
-</div>
-   </div> 
+ 
    <p></p>
   
